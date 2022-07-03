@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Judul Dokumen</title>
+    <style>
+        /* Rule styling akan diterapkan pada karakter pertama disebuah paragraf */
+        p::first-letter {
+            font-size: 32px;
+            font-weight: bold;
+            color: saddlebrown;
+        }
+
+        /* pseudo-element selector */
+        blockquote::before,
+        blockquote::after {
+            content: '"';
+            font-size: 24px;
+            font-style: italic;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto deserunt, dicta laudantium quae quam sequi
+        soluta vitae! A, architecto beatae, consequuntur et eveniet fuga laudantium molestias praesentium temporibus,
+        unde
+        velit.</p>
+
+    <blockquote>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut eius error explicabo ipsum molestiae
+        necessitatibus nesciunt possimus reprehenderit sed voluptates. Aliquam aspernatur autem est nobis officia
+        praesentium quas recusandae rem.</blockquote>
+</body>
+
+</html>

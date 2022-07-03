@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Tipe Selector</title>
+    <style>
+        /* type selector */
+        span {
+            color: red;
+        }
+
+        /* class selector */
+        .red {
+            color: red;
+        }
+
+        .skyblue-bg {
+            background-color: skyblue;
+        }
+
+        .fancy {
+            font-weight: bold;
+            text-shadow: 4px 4px 3px #77f;
+        }
+
+        p.fancy {
+            text-shadow: 4px 4px 3px #00c8eb;
+        }
+
+        /* id selector */
+        #special {
+            background-color: skyblue;
+        }
+
+        /* attribute selector */
+        /* <a> element yang menerapkan href attribut */
+        a[href] {
+            color: blue;
+        }
+
+        /* <a> element yang menerapkan nilai pada href dengan awalan "#" */
+        a[href^="#"] {
+            background-color: gold;
+        }
+
+        /* <a> element yang menerapkan nilai pada href yang mengandung teks "example" */
+        a[href*="example"] {
+            background-color: silver;
+        }
+
+        /* <a> element yang menerapkan nilai pada href yang mengandung teks "insensitive" tidak mementingkan huruf kapital*/
+        a[href*="insensitive" i] {
+            color: cyan;
+        }
+
+        /* <a> element yang menerapkan nilai pada href dengan akhiran ".org" */
+        a[href$=".org"] {
+            color: red;
+        }
+
+        /* universal selector */
+        /* Menargetkan seluruh tipe elemen 
+        {
+        color: green;
+        }*/
+
+        /* Menargetkan seluruh tipe elemen yang mengandung nilai "en" pada atribut lang */
+        *[lang^=us] {
+            font-style: italic;
+        }
+
+        /* Menargetkan seluruh tipe elemen yang memiliki nilai "warning" pada atribut class */
+        *.warning {
+            color: red;
+        }
+
+        /* Menargetkan seluruh tipe elemen yang memiliki nilai "content" pada atribut id */
+        *#content {
+            border: 1px solid blue;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Type Selector</h2>
+    <p>(Berlaku untuk semua elemen span)
+    <p>
+        <span>Ini merupakan sebuah teks yang berada pada elemen span. Seharusnya elemen ini ditampilkan dengan warna
+            teks
+            merah.</span>
+    <p>Ini merupakan sebuah teks yang berada pada elemen paragraf, teks ini tidak seharusnya tidak akan terpengaruh oleh
+        rule.</p>
+    <span>Ini merupakan sebuah teks yang berada pada elemen span lainnya. Seharusnya elemen ini ditampilkan dengan warna
+        teks merah juga.</span>
+
+    <h2>Class Selector</h2>
+    <p class="red">Paragraf dengan teks berwarna merah</p>
+    <p class="skyblue-bg">Paragraf dengan background berwarna biru langit</p>
+    <p class="fancy">Paragraf dengan gaya fancy</p>
+    <h4 class="fancy">Paragraf dengan teks bergaya fancy</h4>
+    <p>Paragraf yang menampilkan teks dengan warna standar tanpa menerapkan styling</p>
+
+    <h2>ID Selector</h2>
+    <div id="special">
+        <p>Ini merupakan konten di dalam sebuah div yang diberi id special.</p>
+    </div>
+    <div>
+        <p>Ini merupakan konten di dalam sebuah div biasa.</p>
+    </div>
+
+    <h2>Attribute Selector</h2>
+    <ul>
+        <ul>
+            <li><a href="#internal">Internal link</a></li>
+            <li><a href="http://example.com">Example link</a></li>
+            <li><a href="#InSensitive">Insensitive internal link</a></li>
+            <li><a href="http://example.org">Example org link</a></li>
+        </ul>
+    </ul>
+
+    <h2>Universal Selector</h2>
+    <p>
+        Ini merupakan paragraf biasa atau tidak menerapkan atribut apapun. Maka teks pada paragraf ini akan berwarna
+    </p>
+    <p lang="us">
+        This is an English paragraph contains en-us value of lang attribute, so this text will be green and
+        italic.
+    </p>
+
+    <h1>Ini merupakan sebuah header biasa</h1>
+    <h1 lang="us">This is an English Header</h1>
+
+    <p class="warning">
+        Perhatikan paragraf ini! Paragraf ini merupakan paragraf yang memiliki kelas bernilai warning,
+        sehingga teks dari paragraf ini akan berwarna merah
+    </p>
+
+    <div id="content">
+        <p>
+            Ini merupakan sebuah teks di dalam sebuah div yang memiliki id bernilai "content", seharusnya paragraf ini
+            dibungkus dalam border yang memiliki padding 20px
+        </p>
+    </div>
+
+    
+</body>
+
+</html>
